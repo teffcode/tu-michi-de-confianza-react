@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-color: var(--green);
   border-radius: 1.6rem;
   padding: 2.4rem 1.6rem;
-  visibility: hidden;
+  visibility: ${({visibility}) => visibility};
 `
 export const Emoji = styled.div`
   align-self: self-start;

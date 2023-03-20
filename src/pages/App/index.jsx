@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import Title from '../../components/Title'
 import Card from '../../components/Card'
 import Toast from '../../components/Toast'
 import { Header, Section, Footer } from './styles.jsx'
 
+export const michiContext = createContext({})
+
 const App = () => {
-  const [count, setCount] = useState(0)
+  const [toastVisibility, setToastVisibility] = useState('hidden')
 
   return (
-    <>
+    <michiContext.Provider value={{
+      toastVisibility,
+      setToastVisibility
+    }}>
       <Header>
         <Title />
       </Header>
@@ -18,7 +23,7 @@ const App = () => {
       <Footer>
         <Toast />
       </Footer>
-    </>
+    </michiContext.Provider>
   )
 }
 

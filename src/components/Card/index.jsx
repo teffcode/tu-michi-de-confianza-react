@@ -1,6 +1,10 @@
+import { useContext } from 'react'
+import { michiContext } from '../../pages/App/index.jsx'
 import { Container, Figure, Img, P, Button } from './styles.jsx'
 
 const Card = () => {
+  const context = useContext(michiContext)
+
   return (
     <Container>
       <Figure>
@@ -9,7 +13,7 @@ const Card = () => {
           alt="michi de confianza" />
       </Figure>
       <P>Soy tu michi de confianza y estoy aquí para que le eches más ganas a todo we</P>
-      <Button>Pedir aiuda</Button>
+      <Button onClick={() => context.setToastVisibility('visible')}>Pedir aiuda</Button>
     </Container>
   )
 }
