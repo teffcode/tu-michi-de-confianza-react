@@ -1,0 +1,1 @@
+@import"https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap";:root{--gray: rgba(209, 209, 209, 1);--purple: rgba(173, 162, 255, .5);--green: rgba(165, 241, 233, .3)}html{font-size:62.5%}body{display:flex;align-items:center;flex-direction:column;font-family:Poppins,sans-serif;margin:0}
