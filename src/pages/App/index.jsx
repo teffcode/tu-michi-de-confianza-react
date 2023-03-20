@@ -15,7 +15,12 @@ const App = () => {
   useEffect(() => {
     if (sendRequest) {
       (async () => {
-        const response = await fetch(BASE_API)
+        const response = await fetch(BASE_API, {
+	        'mode': 'cors',
+	        'headers': {
+            'Access-Control-Allow-Origin': '*',
+        	}
+    	  })
         const michi = await response.json()
         setMichis(michi[0].url)
         setSendRequest(false)
