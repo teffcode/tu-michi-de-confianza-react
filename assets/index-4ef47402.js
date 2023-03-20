@@ -128,4 +128,4 @@ Error generating stack: `+o.message+`
   margin: 0 0 2.4rem;
 `,Qm=Ze.footer`
   margin: 0 0 2.4rem;
-`,cs=Te.createContext({}),Ym=()=>{const[e,t]=Te.useState("hidden"),[n,r]=Te.useState(null),[l,o]=Te.useState(!0);return Te.useEffect(()=>{l&&(async()=>{const u=await(await fetch(Bm)).json();r(u[0].url),o(!1)})()},[l]),cu(cs.Provider,{value:{toastVisibility:e,setToastVisibility:t,michis:n,setSendRequest:o},children:[ze(Hm,{children:ze($m,{})}),ze(Wm,{children:ze(Lm,{})}),ze(Qm,{children:ze(Vm,{})})]})};oi.createRoot(document.getElementById("root")).render(ze(Ar.StrictMode,{children:ze(Ym,{})}));
+`,cs=Te.createContext({}),Ym=()=>{const[e,t]=Te.useState("hidden"),[n,r]=Te.useState(null),[l,o]=Te.useState(!0);return Te.useEffect(()=>{l&&(async()=>{const u=await(await fetch(Bm,{mode:"cors",headers:{"Access-Control-Allow-Origin":"*"}})).json();r(u[0].url),o(!1)})()},[l]),cu(cs.Provider,{value:{toastVisibility:e,setToastVisibility:t,michis:n,setSendRequest:o},children:[ze(Hm,{children:ze($m,{})}),ze(Wm,{children:ze(Lm,{})}),ze(Qm,{children:ze(Vm,{})})]})};oi.createRoot(document.getElementById("root")).render(ze(Ar.StrictMode,{children:ze(Ym,{})}));
